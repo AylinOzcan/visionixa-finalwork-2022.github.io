@@ -8,18 +8,12 @@ $(function() {
   let windowWidth = $(window).width();
   let htmlHeight = Math.max($(document).height(), $(window).height());
 
-  //backgroundgradient followingg mouse position
+  //backgroundgradient following mouse position
   $(document).mousemove((e) => {
     mouseXpercentage = Math.round(e.pageX / windowWidth * 100);
     mouseYpercentage = Math.round(e.pageY / htmlHeight * 100);
     
     $('#background').css('background', 'radial-gradient(at ' + mouseXpercentage + '% ' + mouseYpercentage + '%, #3560FF, #180022, #180022, #180022)');
-  });
-
-  //CSS custom property that knows the percentage of the page scrolled
-  $(window).scroll(() => {
-    $(document.body.style).css('--scroll', window.scrollY / (document.body.offsetHeight - window.innerHeight));
-    console.log(--scroll, window.scrollY / (document.body.offsetHeight - window.innerHeight))
   });
 
   //This function toggles more (hidden) text when the user clicks on "Read more".
