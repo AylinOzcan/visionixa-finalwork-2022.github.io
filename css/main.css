@@ -89,6 +89,10 @@ li, article a {
   text-transform: capitalize;
 }
 
+h1:nth-child(1) {
+  color: whitesmoke;
+}
+
 h1, h2, h3 {
   text-transform: uppercase;
   color: #B5FFD9;
@@ -186,7 +190,6 @@ nav li a:hover {
 #video-main {
   position: absolute;
   width: 100%;
-  height: 100%;
   left: 0px;
   top: 0px;
   z-index: -1;
