@@ -271,9 +271,35 @@ section, article:nth-child(4) {
 #about-images {
   background-color: #3560FF;
   position: absolute;
-  width: 100px;
-  height: 100px;
-  /*animate that bitches*/
+
+  width: 350px;
+  height: 500px;
+  z-index: -1;
+  -webkit-animation: move-up 25s infinite ease-out;
+  animation: move-up 25s infinite ease-out;
+}
+
+@-webkit-keyframes move-up {
+  0% {
+      top: 900px;
+  }
+  50% {
+      top: 750px;
+  }
+  100% {
+    top: 900px;
+}
+}
+@keyframes move-up {
+  0% {
+      top: 900px;
+  }
+  50% {
+      top: 750px;
+  }
+  100% {
+    top: 900px;
+}
 }
 
 /*service section*/

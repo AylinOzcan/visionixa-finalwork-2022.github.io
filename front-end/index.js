@@ -16,6 +16,12 @@ $(function() {
     $('#background').css('background', 'radial-gradient(at ' + mouseXpercentage + '% ' + mouseYpercentage + '%, #3560FF, #180022, #180022, #180022)');
   });
 
+  //CSS custom property that knows the percentage of the page scrolled
+  $(window).scroll(() => {
+    $(document.body.style).css('--scroll', window.scrollY / (document.body.offsetHeight - window.innerHeight));
+    console.log(--scroll, window.scrollY / (document.body.offsetHeight - window.innerHeight))
+  });
+
   //This function toggles more (hidden) text when the user clicks on "Read more".
   $('.moreless-button:first').click(function (e) { 
     e.preventDefault();
