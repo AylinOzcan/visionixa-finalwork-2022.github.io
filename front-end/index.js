@@ -5,6 +5,16 @@ $(function() {
   let s_email = $('#email');
   let s_message = $('#message');
   let m_email = 'aylin.ozcan@student.ehb.be';
+  let windowWidth = $(window).width();
+  let htmlHeight = Math.max($(document).height(), $(window).height());
+
+  //backgroundgradient followingg mouse position
+  $(document).mousemove((e) => {
+    mouseXpercentage = Math.round(e.pageX / windowWidth * 100);
+    mouseYpercentage = Math.round(e.pageY / htmlHeight * 100);
+    
+    $('#background').css('background', 'radial-gradient(at ' + mouseXpercentage + '% ' + mouseYpercentage + '%, #3560FF, #180022, #180022, #180022)');
+  });
 
   //This function toggles more (hidden) text when the user clicks on "Read more".
   $('.moreless-button:first').click(function (e) { 
