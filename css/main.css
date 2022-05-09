@@ -17,6 +17,17 @@ body {
   background-color: #180022;
 }
 
+#background {
+  position: sticky;
+  top: 0px;
+  left:0px;
+  
+  /*Fallback if gradeints don't work */
+  background: #180022;
+  /*Linear gradient... */
+  background: radial-gradient(at center,#180022, #3560FF);
+}
+
 body, input, textarea {
   font-family: myriad-pro, sans-serif;
 }
@@ -142,7 +153,7 @@ h1, h2, h3 {
 
 /*nav*/
 nav {
-  margin: 12px 0px 0px 0px;
+  padding: 12px 0px 0px 0px;
   overflow: hidden;
 }
 
