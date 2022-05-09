@@ -526,6 +526,15 @@ hr {
 footer {
   padding: 10% 0 2% 0;
 }
+
+footer img {
+  float: left;
+}
+
+footer p {
+  clear: right;
+}
+
 .copyright {
   text-transform: uppercase;
   margin: 2em 0 0;
