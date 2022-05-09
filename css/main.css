@@ -529,6 +529,7 @@ footer {
 
 footer img {
   float: left;
+  margin-right: 3em;
 }
 
 footer p {
