@@ -13,7 +13,7 @@ $(function() {
     mouseXpercentage = Math.round(e.pageX / windowWidth * 100);
     mouseYpercentage = Math.round(e.pageY / htmlHeight * 100);
     
-    $('#background').css('background', 'radial-gradient(at ' + mouseXpercentage + '% ' + mouseYpercentage + '%, #3560FF, #180022, #180022, #180022)');
+    $('#background').css('background', 'radial-gradient(circle at ' + mouseXpercentage + '% ' + mouseYpercentage + '%, #3560FF -5%, transparent 400px), radial-gradient(farthest-corner at bottom left, #3560FF -20%, transparent 600px), radial-gradient(farthest-corner at top right, #AE00FB -20%, transparent 600px)');
   });
 
   //This function toggles more (hidden) text when the user clicks on "Read more".
