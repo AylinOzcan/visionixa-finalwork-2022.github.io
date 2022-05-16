@@ -14,22 +14,8 @@ html {
 
 body {
   color: #FFFFFF;
-  background-color: #180022;
-}
-
-#background {
-  position: sticky;
-  top: 0px;
-  left:0px;
-  
-  /*Fallback if gradeints don't work */
+  /*Fallback if gradient background don't work */
   background: #180022;
-  /*Linear gradient... */
-  background: radial-gradient(at center,#180022, #3560FF);
-}
-
-body, input, textarea {
-  font-family: myriad-pro, sans-serif;
 }
 
 a {
@@ -38,6 +24,23 @@ a {
 
 ul {
   list-style-type: none;
+}
+
+/*background*/
+#background {
+  position: sticky;
+  top: 0px;
+  left:0px;
+
+  /*radial gradients*/
+  background: -webkit-radial-gradient(farthest-corner bottom left, #3560FF, transparent 600px), -webkit-radial-gradient(farthest-corner top right, #AE00FB -20%, transparent 600px);
+  background: -moz-radial-gradient(farthest-corner bottom left, #3560FF, transparent 600px), -moz-radial-gradient(farthest-corner top right, #AE00FB -20%, transparent 600px);
+  background: radial-gradient(farthest-corner at bottom left, #3560FF, transparent 600px), radial-gradient(farthest-corner at top right, #AE00FB -20%, transparent 600px);
+}
+
+/*font*/
+body, input, textarea {
+  font-family: myriad-pro, sans-serif;
 }
 
 h1, h2, h3, p {
@@ -105,6 +108,14 @@ h1, h2, h3 {
 
 .center {
   margin: auto;
+}
+
+/*icons*/
+.icon {
+  width: 46px;
+  height: 46px;
+  margin-bottom: 1.6em;
+  background-size: cover;
 }
 
 /*body container*/
@@ -262,7 +273,8 @@ section, article:nth-child(4) {
 }
 
 .column {
-  margin: 0 1.5em;
+  margin-left: 1.5em;
+  margin-right: 1.5em;
   flex: 1;
 }
 
@@ -311,22 +323,20 @@ section, article:nth-child(4) {
   flex-direction: row;
 }
 
-.icon {
-  width: 46px;
-  height: 46px;
-  margin-bottom: 1.6em;
+.services-icon {
+  background-image: url(../images/icons/servicessprites.svg);
 }
 
 #hologram-icon {
-  background: url('../images/icons/servicessprites.png') 0 0 ;
+  background-position: 0 0 ;
 }
 
 #twitch-icon {
-  background: url('../images/icons/servicessprites.png') -46px 0;
+  background-position: -46px 0;
 }
 
 #audio-icon {
-  background: url('../images/icons/servicessprites.png') -92px 0;
+  background-position: -92px 0;
 }
 
 /*support section*/
@@ -439,8 +449,8 @@ margin-bottom: 3em;
   width: 32px;
   height: 32px;
   display: inline-block;
-  margin-right: 5em;
-  margin-left: 5em;
+  margin: 0 5em 0;
+  background-image: url(../images/icons/contactsprites.svg);
 }
 
 .contact-list li {
@@ -450,15 +460,15 @@ margin-bottom: 3em;
 
 /*contact icon*/
 #pin-icon {
-  background: url(../images/icons/contactsprints.png) -32px 0;
+  background-position: -32px 0;  
 }
 
 #phone-icon {
-  background: url(../images/icons/contactsprints.png) 0 0;
+  background-position: 0 0;
 }
 
 #mail-icon {
-  background: url(../images/icons/contactsprints.png) -64px 0;
+  background-position: -64px 3px;
 }
 
 hr {
@@ -467,16 +477,20 @@ hr {
 }
 
 /*social icon*/
+.socials-icon {
+  background-image: url(../images/icons/socialssprites.svg);
+}
+
 #github-icon {
-  background: url(../images/icons/socialssprites.png) 0 0;
+  background-position: 0 0;
 }
 
 #youtube-icon {
-  background: url(../images/icons/socialssprites.png) -46px 0;
+  background-position: -46px 0;
 }
 
 #instagram-icon {
-  background: url(../images/icons/socialssprites.png) -92px 0;
+  background-position: -92px 0;
 }
 
 /*form*/
